@@ -119,8 +119,11 @@
             //        Actions for tab clicks
             //----------------------------------------------------------
 
+
             a(".tabs a.tab").click(function(e) {
                 e.preventDefault();
+
+
                 // Just making sure we don't animate already active tabs.
                 if (a(this).hasClass('active') === false){
 
@@ -140,12 +143,20 @@
                         .addBack()
                         .removeClass("active");
 
-                    //Adding back the "active" class 
+                    //Adding back the "active" class
                     //to the appropriate buttons.
                     a(this).addClass("active");
                     a("a[href^='" + d + "'].tab_button").addClass("active");
-                }
-                
+                }else{
+					if (a(this).hasClass('toggle')){
+						d = a(this).attr("href");
+						a(d).hide();
+						a(this).removeClass('active');
+						a("a[href^='" + d + "'].tab_button")
+						.removeClass('active');
+					};
+				};
+
             });
 
             //Actions for accordion tab_buttons.
@@ -180,3 +191,7 @@
         });
     };
 })(jQuery);
+
+$(function(){
+
+})

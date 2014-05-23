@@ -1,0 +1,13 @@
+.txt_left{
+	text-align: left;
+}
+.txt_upper{
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+.txt_small{
+	@extend small;
+}
+.txt_label{
+	font-family: $primary-font-stack;
+}

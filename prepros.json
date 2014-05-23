@@ -1,11 +1,11 @@
 {
-  "id": "ebbb92c1",
+  "id": "e294a6a2",
   "cfgVersion": 1,
-  "name": "Front-End-Framework",
+  "name": "Wireframes (v2)",
   "files": {
     "29463767": {
       "id": "29463767",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "name": "plugins.js",
       "input": "_partials/js/plugins.js",
       "customOutput": "js/plugins.min.js",
@@ -19,7 +19,7 @@
     },
     "fd45df93": {
       "id": "fd45df93",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "name": "main.scss",
       "input": "_partials/sass/main.scss",
       "customOutput": "css/main.css",
@@ -38,7 +38,7 @@
     },
     "2e8f9ea2": {
       "id": "2e8f9ea2",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "name": "README.md",
       "input": "README.md",
       "customOutput": false,
@@ -51,7 +51,7 @@
     },
     "80e233b2": {
       "id": "80e233b2",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "name": "jquery-2.1.0.js",
       "input": "_partials/js/jquery-2.1.0.js",
       "customOutput": "js/vendor/jquery-2.1.0.min.js",
@@ -65,7 +65,7 @@
     },
     "c9e845a6": {
       "id": "c9e845a6",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "name": "main.js",
       "input": "_partials/js/main.js",
       "customOutput": "js/main.min.js",
@@ -79,7 +79,7 @@
     },
     "bcba8a93": {
       "id": "bcba8a93",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "name": "print.scss",
       "input": "_partials/sass/print.scss",
       "customOutput": "css/print.css",
@@ -100,7 +100,7 @@
   "imports": {
     "61066587": {
       "id": "61066587",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/utilities/_functions.scss",
       "parents": [
         "fd45df93"
@@ -108,7 +108,7 @@
     },
     "03f366b1": {
       "id": "03f366b1",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/utilities/_variables.scss",
       "parents": [
         "fd45df93"
@@ -116,7 +116,7 @@
     },
     "b3bd3d3b": {
       "id": "b3bd3d3b",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/type/_fonts.scss",
       "parents": [
         "fd45df93"
@@ -124,7 +124,7 @@
     },
     "beae85f3": {
       "id": "beae85f3",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/type/_typography.scss",
       "parents": [
         "fd45df93"
@@ -132,7 +132,7 @@
     },
     "293aabec": {
       "id": "293aabec",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/vendor/_normalize.scss",
       "parents": [
         "fd45df93"
@@ -140,7 +140,7 @@
     },
     "dacdeb34": {
       "id": "dacdeb34",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/components/_import.scss",
       "parents": [
         "fd45df93"
@@ -148,7 +148,7 @@
     },
     "9e49fbfa": {
       "id": "9e49fbfa",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/components/_buttons.scss",
       "parents": [
         "fd45df93"
@@ -156,7 +156,7 @@
     },
     "ead02c02": {
       "id": "ead02c02",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/components/_lists.scss",
       "parents": [
         "fd45df93"
@@ -164,7 +164,7 @@
     },
     "a26e4f54": {
       "id": "a26e4f54",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/components/_tabs.scss",
       "parents": [
         "fd45df93"
@@ -172,7 +172,7 @@
     },
     "2d32bc55": {
       "id": "2d32bc55",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/components/_tables.scss",
       "parents": [
         "fd45df93"
@@ -180,7 +180,7 @@
     },
     "4a2a99af": {
       "id": "4a2a99af",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/colors/_colors.scss",
       "parents": [
         "fd45df93"
@@ -188,7 +188,7 @@
     },
     "b121f4cd": {
       "id": "b121f4cd",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/components/_boxes.scss",
       "parents": [
         "fd45df93"
@@ -196,7 +196,7 @@
     },
     "e3dafaf0": {
       "id": "e3dafaf0",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/utilities/_helpers.scss",
       "parents": [
         "fd45df93"
@@ -204,7 +204,7 @@
     },
     "f31bfafc": {
       "id": "f31bfafc",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/layout/_import.scss",
       "parents": [
         "fd45df93"
@@ -212,7 +212,7 @@
     },
     "12f8021d": {
       "id": "12f8021d",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/layout/_grids.scss",
       "parents": [
         "fd45df93"
@@ -220,7 +220,7 @@
     },
     "fbf140d1": {
       "id": "fbf140d1",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/layout/_alignment.scss",
       "parents": [
         "fd45df93"
@@ -228,7 +228,7 @@
     },
     "6d964ee4": {
       "id": "6d964ee4",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/base/_config.scss",
       "parents": [
         "fd45df93"
@@ -236,7 +236,7 @@
     },
     "7d3464df": {
       "id": "7d3464df",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/base/_app.scss",
       "parents": [
         "fd45df93"
@@ -244,7 +244,7 @@
     },
     "a147c13d": {
       "id": "a147c13d",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/colors/_blendmodes.scss",
       "parents": [
         "fd45df93"
@@ -252,8 +252,48 @@
     },
     "09f39804": {
       "id": "09f39804",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "_partials/sass/layout/_spacing.scss",
+      "parents": [
+        "fd45df93"
+      ]
+    },
+    "b37986d0": {
+      "id": "b37986d0",
+      "pid": "e294a6a2",
+      "path": "_partials/js/_tabs.js",
+      "parents": [
+        "29463767"
+      ]
+    },
+    "6c400ee9": {
+      "id": "6c400ee9",
+      "pid": "e294a6a2",
+      "path": "_partials/js/_tables.js",
+      "parents": [
+        "29463767"
+      ]
+    },
+    "811d2fdb": {
+      "id": "811d2fdb",
+      "pid": "e294a6a2",
+      "path": "_partials/js/_colors.js",
+      "parents": [
+        "29463767"
+      ]
+    },
+    "148f37e5": {
+      "id": "148f37e5",
+      "pid": "e294a6a2",
+      "path": "_partials/js/_slick.js",
+      "parents": [
+        "29463767"
+      ]
+    },
+    "059a4415": {
+      "id": "059a4415",
+      "pid": "e294a6a2",
+      "path": "_partials/sass/vendor/_slick.scss",
       "parents": [
         "fd45df93"
       ]
@@ -262,7 +302,7 @@
   "images": {
     "69903336": {
       "id": "69903336",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "images/github.png",
       "size": 2377,
       "name": "github.png",
@@ -272,7 +312,7 @@
     },
     "89970582": {
       "id": "89970582",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/large.png",
       "size": 114627,
       "name": "large.png",
@@ -282,7 +322,7 @@
     },
     "84bb9118": {
       "id": "84bb9118",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/apple-touch-icon-114x114-precomposed.png",
       "size": 3449,
       "name": "apple-touch-icon-114x114-precomposed.png",
@@ -292,7 +332,7 @@
     },
     "6773ff18": {
       "id": "6773ff18",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/apple-touch-icon-120x120-precomposed.png",
       "size": 3783,
       "name": "apple-touch-icon-120x120-precomposed.png",
@@ -302,7 +342,7 @@
     },
     "e1049c97": {
       "id": "e1049c97",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/apple-touch-icon-144x144-precomposed.png",
       "size": 5067,
       "name": "apple-touch-icon-144x144-precomposed.png",
@@ -312,7 +352,7 @@
     },
     "fa9be594": {
       "id": "fa9be594",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/apple-touch-icon-152x152-precomposed.png",
       "size": 5138,
       "name": "apple-touch-icon-152x152-precomposed.png",
@@ -322,7 +362,7 @@
     },
     "5eb875cd": {
       "id": "5eb875cd",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/apple-touch-icon-57x57-precomposed.png",
       "size": 951,
       "name": "apple-touch-icon-57x57-precomposed.png",
@@ -332,7 +372,7 @@
     },
     "8c919e4c": {
       "id": "8c919e4c",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/apple-touch-icon-60x60-precomposed.png",
       "size": 1011,
       "name": "apple-touch-icon-60x60-precomposed.png",
@@ -342,7 +382,7 @@
     },
     "978f31e9": {
       "id": "978f31e9",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/apple-touch-icon-72x72-precomposed.png",
       "size": 1741,
       "name": "apple-touch-icon-72x72-precomposed.png",
@@ -352,7 +392,7 @@
     },
     "c2457c96": {
       "id": "c2457c96",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/apple-touch-icon-76x76-precomposed.png",
       "size": 2000,
       "name": "apple-touch-icon-76x76-precomposed.png",
@@ -362,7 +402,7 @@
     },
     "dbc83902": {
       "id": "dbc83902",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/apple-touch-icon-precomposed.png",
       "size": 6737,
       "name": "apple-touch-icon-precomposed.png",
@@ -372,7 +412,7 @@
     },
     "da0c504f": {
       "id": "da0c504f",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/apple-touch-icon.png",
       "size": 5138,
       "name": "apple-touch-icon.png",
@@ -382,7 +422,7 @@
     },
     "0dc837a8": {
       "id": "0dc837a8",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/favicon-160x160.png",
       "size": 5871,
       "name": "favicon-160x160.png",
@@ -392,7 +432,7 @@
     },
     "431ec51e": {
       "id": "431ec51e",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/favicon-16x16.png",
       "size": 243,
       "name": "favicon-16x16.png",
@@ -402,7 +442,7 @@
     },
     "f8028ba9": {
       "id": "f8028ba9",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/favicon-196x196.png",
       "size": 10529,
       "name": "favicon-196x196.png",
@@ -412,7 +452,7 @@
     },
     "2cdeccc1": {
       "id": "2cdeccc1",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/favicon-32x32.png",
       "size": 496,
       "name": "favicon-32x32.png",
@@ -422,7 +462,7 @@
     },
     "d093c04f": {
       "id": "d093c04f",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/favicon-96x96.png",
       "size": 2795,
       "name": "favicon-96x96.png",
@@ -432,7 +472,7 @@
     },
     "c822fddd": {
       "id": "c822fddd",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/mstile-144x144.png",
       "size": 4221,
       "name": "mstile-144x144.png",
@@ -442,7 +482,7 @@
     },
     "53b4cab2": {
       "id": "53b4cab2",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/mstile-150x150.png",
       "size": 3934,
       "name": "mstile-150x150.png",
@@ -452,7 +492,7 @@
     },
     "a1046ad8": {
       "id": "a1046ad8",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/mstile-310x150.png",
       "size": 4374,
       "name": "mstile-310x150.png",
@@ -462,7 +502,7 @@
     },
     "7f65ca79": {
       "id": "7f65ca79",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/mstile-310x310.png",
       "size": 15263,
       "name": "mstile-310x310.png",
@@ -472,7 +512,7 @@
     },
     "ba999c19": {
       "id": "ba999c19",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/mstile-70x70.png",
       "size": 2631,
       "name": "mstile-70x70.png",
@@ -482,7 +522,7 @@
     },
     "b1118ef4": {
       "id": "b1118ef4",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/square.png",
       "size": 35746,
       "name": "square.png",
@@ -492,7 +532,7 @@
     },
     "e62f9537": {
       "id": "e62f9537",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/tiny.png",
       "size": 11179,
       "name": "tiny.png",
@@ -502,7 +542,7 @@
     },
     "25cb388f": {
       "id": "25cb388f",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "favicons/wide.png",
       "size": 64437,
       "name": "wide.png",
@@ -512,7 +552,7 @@
     },
     "de676728": {
       "id": "de676728",
-      "pid": "ebbb92c1",
+      "pid": "e294a6a2",
       "path": "images/logo.png",
       "size": 951,
       "name": "logo.png",

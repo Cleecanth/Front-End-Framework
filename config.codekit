@@ -341,7 +341,7 @@
 		},
 	"\/_partials\/sass\/main.scss": {
 		"createSourceMap": 0,
-		"debugStyle": 0,
+		"debugStyle": 2,
 		"decimalPrecision": 7,
 		"fileType": 4,
 		"ignore": 0,
@@ -387,6 +387,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/_partials\/sass\/type\/_transforms.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 2,
+		"decimalPrecision": 7,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_partials\/sass\/type\/_transforms.scss",
+		"outputAbbreviatedPath": "\/_partials\/sass\/css\/_transforms.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/_partials\/sass\/type\/_typography.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 2,
@@ -400,6 +416,22 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/_partials\/sass\/utilities\/_easings.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 2,
+		"decimalPrecision": 7,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_partials\/sass\/utilities\/_easings.scss",
+		"outputAbbreviatedPath": "\/_partials\/sass\/css\/_easings.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
@@ -805,9 +837,20 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 951,
+		"initialSize": 4126,
 		"inputAbbreviatedPath": "\/images\/logo.png",
 		"outputAbbreviatedPath": "\/images\/logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/logo_main.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4126,
+		"inputAbbreviatedPath": "\/images\/logo_main.png",
+		"outputAbbreviatedPath": "\/images\/logo_main.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -896,9 +939,9 @@
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
-	"displayValue": "Front-End Framework",
+	"displayValue": "Wireframes (v2)",
 	"displayValueWasSetByUser": 1,
-	"iconImageName": "\/favicons\/apple-touch-icon-152x152-precomposed.png"
+	"iconImageName": "\/images\/logo.png"
 	},
 "projectSettings": {
 	"alwaysUseExternalServer": 0,

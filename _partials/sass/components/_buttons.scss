@@ -91,14 +91,14 @@
 //Useful placeholder selector for simple button creation.
 
 %button{
-    @include button(true, #0c639a, blend-colordodge(#808080,#0c639a), #ebfbff, 2px, true);
+    @include button(true, #777, #ddd, #fff, 2px, true);
 }
 %button_big{
     @include type-font-size(modular-scale(2), false);
     @include type-space-sc(padding, .5, 1);
 }
 %button_small{
-	@include type-font-size(modular-scale(0), false);
+	@include type-font-size(modular-scale(-1), false);
 }
 %button_wide{
     @extend %one_whole;

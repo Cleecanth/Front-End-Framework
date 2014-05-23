@@ -65,3 +65,11 @@
 .wide:before{
 	margin-top: 50%;
 }
+
+.box_light{
+	background-color: #fff;
+}
+.box_dark{
+	background-color: colors(function);
+	color: #fff;
+}

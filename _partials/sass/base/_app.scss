@@ -15,7 +15,7 @@ mark{
 	border-style: solid;
 }
 .tab_topline > .tabs{
-	background-color: #e3f1fa;
+	background-color: #ddd;
 }
 .tab_minimal > .tab_content{
 	border-bottom-width: 2px !important;
@@ -26,6 +26,10 @@ hr{
 	margin-top: -2px;
 }
 
+.button{
+    @extend %button;
+}
+
 [class*="list_bordered"] > li{
 	border-top-width: 2px;
 	margin-top: -2px;
@@ -34,24 +38,58 @@ hr{
 	}
 }
 .tab, .list_nav a{
-	font-family: $secondary-font-stack;
 	text-transform: uppercase;
 	letter-spacing: .5px;
 	@extend %type_bold;
 	@extend small;
 	text-decoration: none;
+	text-align: left;
+	text-indent: 0 !important;
+}
+.button_small{
+	@extend %button_small;
+	@include type-space-sc(padding, .25,.5);
+	vertical-align: middle;
+}
+.tabbed{
+	min-height: 0;
 }
 html{
-	background-color: #f3f5f8;
+	background-color: #efefef;
 	color: #041927;
+	@include mq(lap){
+		font-size: 14px;
+	}
+	@include mq(smalls){
+		font-size: 13px;
+	}
 }
 body{
 	@extend %pad_b_2;
 }
+.main_content{
+	@extend %one_whole;
+	@extend %bigs_two_thirds;
+	@extend %desk_three_quarters;
+}
+.side_content{
+	@extend %one_whole;
+	@extend %bigs_one_third;
+	@extend %desk_one_quarter;
+}
+.main_nav .tabs{
+	display: table-row;
+}
+.main_nav .tab{
+	@extend %pad_r;
+	@extend %pad_l_half;
+	width: auto;
+	display: table-cell;
+	vertical-align: middle;
+}
 .wrap{
     @extend %bigs_nine_tenths; //90%
 	@extend %smallish_eleven_twelfths; //~92%
-	@include type-space-sc(padding, 1, 0, 0);
     @extend %clearfix;
     max-width: 1200px;
     margin: 0 auto;
@@ -70,17 +108,25 @@ body{
 	@include headings-scale(1.2, smallish);
 }
 
-.row-narrow{
+.row_narrow_right{
     @extend %grid_narrow;
 }
 .row{
     @extend %grid;
 }
-.fixed-row{
+.fixed_row{
     @extend %grid;
     margin-left: 0;
 }
-
+.row_right{
+	@extend %grid_right;
+}
+.row_bottom{
+	@extend %grid_bottom;
+}
+.row_middle{
+	@extend %grid_middle;
+}
 .column{
     @extend %grid_item;
     @extend %one_whole;
@@ -99,7 +145,6 @@ body{
     @extend %smalls_one_whole;
     @extend %bigs_three_quarters;
 }
-
 .add-on{
     @extend %one_whole;
     @extend %smallish_one_fifth;
@@ -109,11 +154,12 @@ body{
     @extend %smallish_four_fifths;
     @extend %bigs_five_sixths;
 }
-
-.button{
-    @extend %button;
+@include headings(1 , 4){
+	font-weight: 400;
 }
-
+h5,.h5, h6,.h6{
+	font-family: $primary-font-stack;
+}
 .media_block{
     @extend %media_block;
     @extend %cf;
@@ -123,10 +169,6 @@ body{
 	margin-right: .5em;
 	display: inline-block;
 	margin-top: -.25em;
-}
-.box_open{
-	border-width: 2px;
-	margin-top: -4px;
 }
 
 #toggles{

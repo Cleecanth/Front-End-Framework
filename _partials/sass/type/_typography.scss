@@ -137,6 +137,7 @@ body{
 
 @include headings(1,6){
 	@extend %text_legibility;
+	font-family: $secondary-font-stack;
 }
 
 @if $auto-scale-type == true {

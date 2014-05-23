@@ -5,14 +5,14 @@ $base-line-height:           24px;
 $auto-scale-type:           false;
 $scale-ratio:               1.214;
 
-$primary-font-stack:      	'Asap', verdana, helvetica, arial, sans-serif;
-$secondary-font-stack:     	'opensans', verdana, helvetica, arial, sans-serif;
+$primary-font-stack:      	'opensans', verdana, helvetica, arial, sans-serif;
+$secondary-font-stack:     	'bitter', georgia, times, serif;
 $monospace-font-stack: 		Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
 $use-web-fonts: 		true;
 $font-file-location: 	'fonts';
-$font-file-name: 		'Asap','opensans';
-$font-italics: 			true, (false, true, true);
+$font-file-name: 		'bitter','opensans';
+$font-italics: 			true, true;
 $font-weights: 			(400,700),(200,400,700);
 $font-include-eot: 		true;
 
@@ -64,25 +64,25 @@ $breakpoint-has-pull:   ('smalls', 'small', 'smallish', 'bigs', 'lap', 'desk');
 
 $colors: (
 	primary: (
-		base: #0c639a
+		base: #000
 	),
 	primary-alt: (
-		base: #5d9bc0
+		base: #444
 	),
 	accent: (
-		base: #d40026
+		base: #666
 	),
 	accent-alt: (
-		base: #fe0202
+		base: #888
 	),
 	action: (
-		base: #619bbe
+		base: #999
 	),
 	function: (
-		base: #d7dde5
+		base: #aaa
 	),
 	alert: (
-		base: #b22727
+		base: #ddd
 	)
 );
 

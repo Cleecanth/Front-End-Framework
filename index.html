@@ -29,7 +29,7 @@
         <meta name="msapplication-TileColor" content="#f52b61">
         <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
 
-        <title>e-Health Frontend Framework</title>
+        <title>Search for Lorem Ipsum | U-Connect</title>
 
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" media="print" href="css/print.css" >
@@ -45,36 +45,83 @@
         Baseline
     </a>
 </div>
-<div class="wrap">
-    <header class="row" role="banner">
-        <div class="column media_block">
-            <a href="/" class="link_naked">
-                <img src="images/logo.png" class="img align_left">
-                <h1>
-                    e-Health Frontend Framework
-                </h1>
-            </a>
-		</div>
-		<div class="column">
-			<nav class="box box_open pad_v_half" role="navigation">
-				<ul class="list_inline list_nav h6">
-					<li><a href="grid.html">Grid</a></li>
-					<li><a href="lists.html">Lists</a></li>
-					<li><a href="components.html">Components</a></li>
-					<li><a href="functions.html">Functions</a></li>
-					<li><a href="misc.html">Misc.</a></li>
-					<li class="align_right">
-						<a href="https://github.com/UWHealth/Front-End-Framework" target="_blank">
-							<img src="images/github.png" class="icon">Github
-						</a>
-					</li>
+<header class="box_light space_v">
+	<div class="wrap">
+		<div class="row txt_small">
+			<nav class="column half">
+				<ul class="list_inline list_nav txt_upper">
+					<li><a href="directory">Directory</a></li>
+					<li><a href="forms">Forms &amp; Tools</a></li>
+					<li><a href="policies">Policies</a></li>
+					<li><a href="paging">Paging</a></li>
+					<li><a href="paging">For Managers</a></li>
 				</ul>
 			</nav>
-    	</div>
-    </header>
+			<div class="column half pad_t_half">
+				<div class="row row_narrow">
+					<div class="column main_content">
+						<label class="field_search align_right" for="search_main">
+							<input id="search_main" class="field_expand" type="search" placeholder="Search U-Connect">
+							<button class="icon">Search</button>
+						</label>
+					</div>
+					<div class="column side_content">
+						<a href="#" class="button button_small txt_upper">Login</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="box_open pad_t">
+		<div class="wrap pad_t_half">
+			<div class="row row_bottom">
+				<div class="column side_content space_negative">
+					<a href="index.html">
+						<img class="logo" src="images/logo_main.png">
+					</a>
+				</div>
+				<div class="column main_content">
+					<div class="tabbed tab_minimal tab_line space_n_v main_nav">
+						<nav class="tabs">
+							<a href="#home" class="tab toggle">Home</a>
+							<a href="#clin" class="tab toggle">Clinical<br>Hub</a>
+							<a href="#dept" class="tab toggle">Departments <br>&amp; Programs</a>
+							<a href="#grow" class="tab toggle">Growth &amp; <br>Development</a>
+							<a href="#inst" class="tab toggle">Our <br>Institutions</a>
+							<a href="#sec" class="tab toggle">Safety <br>&amp;&nbsp;Security</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tab_content hidden" id="home"></div>
+	<div class="tab_content" id="clin"></div>
+	<div class="tab_content" id="dept"></div>
+	<div class="tab_content" id="grow"></div>
+	<div class="tab_content" id="inst"></div>
+	<div class="tab_content" id="sec"></div>
 
-    <main role="main">
-        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, voluptate aperiam</h2>
+	<section class="box_dark">
+		<div class="wrap">
+			<div class="row clearfix pad_t_half">
+
+				<div class="column align_right main_content">
+					<h1 class="h4">
+						<small class="txt_upper txt_label">You searched for</small><br>
+						"Lorem ipsum dolor sit amet"
+					</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</header>
+
+
+
+    <main role="main" class="wrap">
+
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, iusto, laudantium, voluptates, cum distinctio quos numquam sit earum error ex quis velit laborum hic quidem excepturi tenetur est! Odio, minima?</p>
         <p>Nostrum, laborum, perferendis, distinctio, iusto tempora rem blanditiis at rerum impedit ea amet ab culpa incidunt fugit ut quo iste aut eos provident animi neque a officia odio. Nihil, ea!</p>
         <div class="row">
@@ -150,45 +197,7 @@
                 <hr>
             </div>
         </div>
-        <h6>
-        <mark>Minimal Side Tabs</mark> Totam, voluptatum, vel, in fuga rerum quo accusantium distinctio saepe voluptate fugiat eveniet commodi officiis sapiente odio expedita sit blanditiis assumenda cupiditate voluptates autem ex consequuntur eius fugit rem neque omnis obcaecati!
-        </h6>
-        <a href="#tab1" class="tab_button" data-tab="tab_side tab_accordion tab_minimal">Tab 1</a>
-        <div id="tab1" class="tab_content">
-            <h5><mark>Tabs Test (tab_side, tab_minimal)</mark></h5>
 
-            <a href="#moretabs" class="tab_button" data-tab="tab_minimal tab_line">More Tabs</a>
-        	<div id="moretabs" class="tab_content">
-            	<h6><mark>tab_minimal tab_line</mark></h6>
-            	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, ratione doloremque obcaecati provident necessitatibus. Enim, vero quisquam repellat consequatur sed.</p>
-        	</div>
-
-			<a href="#anothertab" class="tab_button">Another Tab</a>
-			<div id="anothertab" class="tab_content">
-				<p>Consectetur adipisicing elit. Atque, tenetur, odio impedit nihil in quae reprehenderit ipsa qui iste ut iusto vitae voluptatibus maiores veniam asperiores totam quod aut porro?</p>
-        	</div>
-        	<a href="#yetanother" class="tab_button">And Yet another Tab</a>
-			<div id="yetanother" class="tab_content">
-				<p>Consectetur adipisicing elit. Atque, tenetur, odio impedit nihil in quae reprehenderit ipsa qui iste ut iusto vitae voluptatibus maiores veniam asperiores totam quod aut porro?</p>
-        	</div>
-
-		</div>
-
-        <a href="#tab2" class="tab_button">Tab 2</a>
-        <div id="tab2" class="tab_content"><p>
-            Consectetur adipisicing elit. Atque, tenetur, odio impedit nihil in quae reprehenderit ipsa qui iste ut iusto vitae voluptatibus maiores veniam asperiores totam quod aut porro?</p>
-
-                <a href="#tab3" class="tab_button quarter" data-tab="">Tab 3</a>
-                <div id="tab3" class="tab_content"><h5><mark>Tabs Test (normal tabs with grid widths)</mark></h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, ratione doloremque obcaecati provident necessitatibus. Enim, vero quisquam repellat consequatur sed.</p>
-                </div>
-                <a href="#tab4" class="tab_button half">Combo tab style</a>
-                <div id="tab4" class="tab_content"><h5><mark>Stupid Looking Tab Test(grid width-based)</mark></h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, ratione doloremque obcaecati provident necessitatibus. Enim, vero quisquam repellat consequatur sed.</p>
-                </div>
-
-        </div>
-        <h6 class="h4 space_n_v"><mark>Table Test</mark></h6>
         <table class="table_fixed table_striped">
           <thead>
               <tr>
@@ -226,44 +235,6 @@
 
           </tbody>
         </table>
-
-        <p>
-        <h6 class="h4"><mark>Colors</mark></h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, odio, incidunt, sapiente repellat reprehenderit minus nam labore soluta odit repellendus architecto laudantium neque vitae maxime totam libero vero quibusdam dignissimos.</p>
-        <div class="fixed-row">
-
-            <div class="color-block">$primary-color</div>
-            <div class="color-block">$accent-color</div>
-            <div class="color-block">$action-color</div>
-            <div class="color-block">$function-color</div>
-            <div class="color-block">$alert-color</div>
-
-            <div class="color-block">$primary-color-dark</div>
-            <div class="color-block">$accent-color-dark</div>
-            <div class="color-block">$action-color-dark</div>
-            <div class="color-block">$function-color-dark</div>
-            <div class="color-block">$alert-color-dark</div>
-
-            <div class="color-block">$primary-color-light</div>
-            <div class="color-block">$accent-color-light</div>
-            <div class="color-block">$action-color-light</div>
-            <div class="color-block">$function-color-light</div>
-            <div class="color-block">$alert-color-light</div>
-
-            <div class="color-block">$primary-color-lighter</div>
-            <div class="color-block">$accent-color-lighter</div>
-            <div class="color-block">$action-color-lighter</div>
-            <div class="color-block">$function-color-lighter</div>
-            <div class="color-block">$alert-color-lighter</div>
-
-            <div class="color-block">$primary-color-darker</div>
-            <div class="color-block">$accent-color-darker</div>
-            <div class="color-block">$action-color-darker</div>
-            <div class="color-block">$function-color-darker</div>
-            <div class="color-block">$alert-color-darker</div>
-
-
-        </div>
     </main>
 </div>
 

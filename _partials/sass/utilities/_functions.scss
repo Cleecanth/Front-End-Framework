@@ -414,26 +414,35 @@ $golden_ratio:  golden();
 // Lifted from inuit.css:
 // github.com/csswizardry/inuit.css/blob/7dbc892f8d298795e19aeb64d1369ae3271561d1/generic/_mixins.scss
 
+$headings-use: 0;
+
 @mixin headings($from: 1, $to: 6){
-    %base-heading {
+    //Used for multiple calls to this mixin.
+	// Ensures no double extends.
+	$headings-use: $headings-use + 1 !global;
+
+	%base-heading#{$headings-use} {
         @content;
     }
 
     @if $from >= 1 and $to <= 6{
+
         @if $type-scale-classes == true{
             @for $i from $from through $to{
-                h#{$i}, .h#{$i}, %h#{$i}{
-                    @extend %base-heading;
+                h#{$i}, .h#{$i}{
+                    @extend %base-heading#{$headings-use};
                 }
             }
         }@else{
             @for $i from $from through $to{
-                h#{$i}, %h#{$i}{
-                    @extend %base-heading;
+                h#{$i}{
+                    @extend %base-heading#{$headings-use};
                 }
             }
         }
-    }
+    }@else{
+		@warn "You need to supply numbers between 1 and 6 for headings to work";
+	}
 }
 
 //-------
@@ -515,7 +524,7 @@ $golden_ratio:  golden();
 		$current-heading: nth($type-headings,$heading-number);
 
 		@if $type-scale-classes == true{
-            h#{$current-heading}, .h#{$current-heading}, %h#{$current-heading} {
+            h#{$current-heading}, .h#{$current-heading} {
                 @include type-font-size($font-size, true);
 				@extend %#{$name-space}type_space_v !optional;
 
@@ -524,7 +533,7 @@ $golden_ratio:  golden();
                 }
             }
         }@else{
-            h#{$current-heading}, %h#{$current-heading}{
+            h#{$current-heading}{
                 @include type-font-size($font-size, true);
 
                 + p{

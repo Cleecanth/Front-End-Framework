@@ -77,7 +77,9 @@
 %display_block{
 	display: block;
 }
-
+%inline_block{
+	display: inline-block;
+}
 //
 // Clear fix. Add @extend %clearfix or @extend %cf to any element that needs self-clearing.
 //
@@ -169,6 +171,10 @@
 	@extend %link_naked;
 }
 
+%space_reset{
+	margin: 0;
+	padding: 0;
+}
 
 //------------------------------------
 //    $RESPONSIVE MIXINS
@@ -184,11 +190,11 @@
 
     %#{$namespace}media_block{
 		zoom: 1;
-        & .img, .media{
+        & .img{
             float:left;
             word-break: break-word;
             display: inline-block;
-            margin-right: $gutter;
+            @extend %#{$namespace}space_r;
         }
         & .img ~ *, & .media_body{
             overflow: hidden;
@@ -212,8 +218,10 @@
     %#{$namespace}naked_list{
         @include no-bullets;
     }
-	%#{$namespace}show     { display: block !important; }
-  	%#{$namespace}hide     { display: none !important; }
+	%#{$namespace}show,.#{$namespace}show
+	{ display: block !important; }
+  	%#{$namespace}hide,.#{$namespace}hide
+	{ display: none !important; }
 
 }
 

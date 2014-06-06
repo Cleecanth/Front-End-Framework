@@ -1,13 +1,103 @@
-<footer role="contentinfo">
-<!--=======================
-        jQuery declaration:
-        1. Internet Explorer 8 fallback
-            a. Use Google first.
-            b. If Google fails, use our copy.
-        2. Anything over Internet Explorer 8, use jQuery 2.x
-            a. Use Google first.
-            b. If Google fails, use our copy.
-===========================-->
+<footer role="contentinfo" class="box_glass">
+	<div class="box_glass pad_v_half smalls_hide">
+		<div class="wrap">
+			<nav class="row row_middle">
+				<div class="column side_content">
+					<a href="index.html">
+						<img src="images/logo_main.png">
+					</a>
+				</div>
+				<ul class="column main_content breadcrumbs txt_upper txt_small bold">
+					<li class="breadcrumb">
+						Search
+					</li>
+					<span>"Lorem Ipsum"</span>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="wrap pad_v">
+		<div class="row">
+			<div class="column side_content contain">
+				<form class="space_v" name="search" action="http://wb-search01.uwhis.hosp.wisc.edu:8080/searchblox/servlet/SearchServlet" method="POST">
+					<label for="search2" class="search icon icon_end h6" data-icon-after="search">
+						<input id="search2" type="search" value=""
+							   name="query" class="p column ui-autocomplete-input">
+					</label>
+				</form>
+				<ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; display: none;"></ul>
+				<nav>
+
+					<ul class="list_bordered list_nav list_nav_space">
+
+						<li><a href="help">U-Connect Help and Tips</a></li>
+						<li><a href="help">Submit an Update or Event</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="main_content column">
+				<h2 class="txt_small txt_label txt_upper bold">
+					Recent U-Connect Updates
+				</h2>
+				<div class="row row_center">
+					<div class="column third small_auto">
+						<div class="box_panel box_card pad_half">
+
+							<h3 class="h6 txt_serif box_card_head">
+								<a href="#">Celebrate Earth Day All Week Long</a>
+							</h3>
+
+							<p class="box_card_body">
+							<time class="txt_small txt_upper">
+								Apr. 29, 2014
+							</time><br>
+							I want to personally share with you details of a patient safety-related event at UW Hospital and Clinics. The event occurred in July and involved</p>
+							<div class="box_card_foot">
+
+								<ul class="list_inline txt_small list_space">
+									<li class="txt_upper">Tagged</li>
+									<li><a class="icon tag">Patient Care</a></li>
+									<li><a class="icon tag">Another Tag</a></li>
+									<li><a class="icon tag">Another Tag</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="column third small_auto">
+						<div class="box_panel box_card pad_half">
+
+							<h3 class="h6 txt_serif box_card_head">
+								<a href="#">@insideuwhealth</a>
+							</h3>
+
+							<p class="box_card_body">
+							<time class="txt_small txt_upper">
+								Apr. 27, 2014
+							</time><br>
+							Congratulations to Project SEARCH for being recognized as one of the 2014 Business Friends of Education. <a href="bit.ly/1pur21H">bit.ly/1pur21H</a></p>
+						</div>
+					</div>
+					<div class="column third column_center small_auto">
+						<div class="box_panel box_card pad_half">
+
+							<h3 class="h6 txt_serif box_card_head">
+								<a href="#">@insideuwhealth</a>
+							</h3>
+
+							<p class="box_card_body">
+							<time class="txt_small txt_upper">
+								Apr. 27, 2014
+							</time><br>
+							Congratulations to Project SEARCH for being recognized as one of the 2014 Business Friends of Education. <a href="bit.ly/1pur21H">bit.ly/1pur21H</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
          <!--[if lte IE 8]>
          <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
          <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
@@ -17,6 +107,7 @@
          <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
          <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.0.min.js"><\/script>')</script>
          <!--<![endif]-->
+
          <script type="text/javascript">
             $(function() {
                 $("body").tabbed({
@@ -24,18 +115,60 @@
                 });
             });
         </script>
+<!--
+		<script>
+  $(function() {
+    function log( message ) {
+      $( "<div>" ).text( message ).prependTo( "#log" );
+      $( "#log" ).scrollTop( 0 );
+    }
+
+    $( "#search2" ).autocomplete({
+      source: function( request, response ) {
+        $.ajax({
+            type: "post",
+            url: "http://wb-search01.uwhis.hosp.wisc.edu:8080/searchblox/servlet/AutoSuggest",
+			data:"q="+request.term+"&limit=5",
+            dataType: "json",
+            success: function(data){
+                		var temp = new Array();
+                		for(var i in data[0]){
+                			temp.push(data[0][i]);
+                		}
+
+//            			if(temp.length>=1)
+//            			{
+//            				z=temp;
+//            				$('#facetview_freetext').autocomplete({
+//            					source : z
+//            				});
+//            			}
+            	}
+          });
+      },
+      minLength: 2,
+      select: function( event, ui ) {
+        log( ui.item ?
+          "Selected: " + ui.item.label :
+          "Nothing selected, input was " + this.value);
+      },
+      open: function() {
+        $( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
+      },
+      close: function() {
+        $( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+      }
+    });
+  });
+  </script>
+-->
 <!--======================
         End jQuery
 ==========================-->
         <script src="js/plugins.min.js"></script>
         <script src="js/main.min.js"></script>
+		<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
 
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='http://www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
 </footer>
 
     </body>

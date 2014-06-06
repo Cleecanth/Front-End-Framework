@@ -11,9 +11,9 @@ $monospace-font-stack: 		Consolas, "Andale Mono WT", "Andale Mono", "Lucida Cons
 
 $use-web-fonts: 		true;
 $font-file-location: 	'fonts';
-$font-file-name: 		'bitter','opensans';
-$font-italics: 			true, true;
-$font-weights: 			(400,700),(200,400,700);
+$font-file-name: 		'bitter','opensans','uconnect';
+$font-italics: 			true, true, false;
+$font-weights: 			(400,700),(200,400,700),(400);
 $font-include-eot: 		true;
 
 
@@ -32,7 +32,7 @@ $type-h6-size:             ceil(modular-scale(1));
 
 //Grid
 
-$gutter:                 30px;
+$gutter:                 32px;
 $use-silent-classes:     true;
 $push:                   true;
 $pull:                   true;
@@ -45,8 +45,8 @@ $breakpoints: (
     'small' '(max-width: 480px)',                            //Up to 480px. Overrides Smalls. Small Phones, including iPhone.
     'smallish''(min-width: 481px) and (max-width: 640px)',     //Between 480 and 640px. Overrides Smalls. Large phones/phablets.
     'bigs' '(min-width: 641px)',                            //Everything larger than 640px. Tablets and Desktops.
-    'lap' '(min-width: 641px) and (max-width: 940px)',        //640-940px. Overrides Bigs. Mostly Tablets and small laptops.
-    'desk' '(min-width: 941px)'                                //940 and Up. Overrides Bigs. Large Tablets and Desktops.
+    'lap' '(min-width: 641px) and (max-width: 960px)',        //640-940px. Overrides Bigs. Mostly Tablets and small laptops.
+    'desk' '(min-width: 961px)'                                //940 and Up. Overrides Bigs. Large Tablets and Desktops.
 );
 
 // Give grid-abilities to breakpoints.
@@ -87,7 +87,7 @@ $colors: (
 );
 
 //It's rare that you need to make this something other than one of the above variables.
-$link-color: color(primary);
+$link-color: color(primary-alt);
 
 
 //Output helpers as actual classes?
@@ -116,10 +116,17 @@ $slick-dot-character: '\2022';
 $include-tabs: 						true;
 
 $tab-invert-active:                 false;
-$tab-border:                        color(primary-alt);
+$tab-border:                        #999;
 $tab-button-bg:                     color(accent);
 $tab-button-secondary: 				color(primary-alt);
 $tab-content-bg:                    #fff;
 $tab-button-text:                   #fff;
 $tab-border-radius:                 2px;
 $tab-spacing:                       2px;
+
+
+//General Border settings
+$include-border-classes: 			true;
+$border-width: 						2px;
+$border-style: 						solid;
+$border-color: 						color(action);

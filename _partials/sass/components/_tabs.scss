@@ -224,7 +224,7 @@ $best-tab-color: pick_best_color(
 	));
 .tab{
 	position: relative;
-	display: inline-block;
+	@extend %inline;
 	vertical-align: bottom;
 	@extend %pad_v_half;
 	@extend %pad_h_half;
@@ -306,7 +306,7 @@ $best-tab-color: pick_best_color(
 //    $NO-JS
 //------------------------------------
 .no-js .tab_button {
-	display: inline-block;
+	@extend %inline;
 	@extend %grid_reset;
 	@extend %#{$bigs}_one_fifth;
     @extend %#{$smalls}_one_whole;

@@ -48,6 +48,10 @@ $alignment-output: true;
 	{
 		float: none !important;
 	}
+	%#{$namespace}inline#{$selector}#{$namespace}inline
+	{
+		display: inline-block;
+	}
 }
 
 @include responsive-alignment("", $alignment-output);

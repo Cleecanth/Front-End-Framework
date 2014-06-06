@@ -1,201 +1,268 @@
 <!--$pageTitle= Search for Lorem Ipsum | U-Connect -->
 <!--@import 'meta.kit'-->
 <div id="toggles">
-    <a id="baseline-on" class="button">
+    <a id="baseline-on" class="button button_small">
         Baseline
     </a>
 </div>
-<header class="box_light space_v">
-	<div class="wrap">
-		<div class="row txt_small">
-			<nav class="column half">
-				<ul class="list_inline list_nav txt_upper">
-					<li><a href="directory">Directory</a></li>
-					<li><a href="forms">Forms &amp; Tools</a></li>
-					<li><a href="policies">Policies</a></li>
-					<li><a href="paging">Paging</a></li>
-					<li><a href="paging">For Managers</a></li>
-				</ul>
-			</nav>
-			<div class="column half pad_t_half">
-				<div class="row row_narrow">
+<header class="box_glass">
+	<article class="top_nav contain">
+		<section id="search_shade" class="box_glass search_shade search_anim_bounce">
+			<div class="row row_right pad_t txt_small bold">
+				<div class="column pad_t_2 side_content txt_upper">
+					<label class="align_right">Narrow Search </label>
+				</div>
+				<div class="column pad_t_2 main_content txt_upper">
+					<ul class="list_inline list_nav">
+						<li><a>U-connect</a></li>
+						<li><a>Directory</a></li>
+						<li><a>Policies</a></li>
+						<li><a>Health Facts For You</a></li>
+				</div>
+			</div>
+		</section>
+		<section class="wrap utility">
+			<div id="search_block">
+				<div class="contain txt_small row_narrow row_middle">
+					<div class="column search_column search_anim third float_right">
+						<div class="row row_auto search_row search_anim">
+							<form class="column search_container search_anim">
+								<label for="search_main" class="search_anim search_label icon icon_end"
+										data-icon-after="search"><span>Search<span></label>
+								<input id="search_main"
+									   class="search_expand column search_anim"
+									   type="search"
+									   placeholder="Search U-Connect"
+									   data-focus="#search_block, #search_shade">
+
+								<button class="search_expand search_button icon button_small button icon_start"
+										data-icon="search"></button>
+
+							</form>
+							<div class="login_column column hidden_on_search search_anim_bounce">
+								<a href="#" class="button button_small login_button txt_upper">
+									Login
+								</a>
+							</div>
+						</div>
+					</div>
+					<nav class="column utility_column hidden_on_search two_thirds">
+						<ul class="list_inline list_nav_space txt_upper">
+							<li><a href="directory">Directory</a></li>
+							<li><a href="forms">Forms &amp; Tools</a></li>
+							<li><a href="policies">Policies</a></li>
+							<li><a href="paging">Paging</a></li>
+							<li><a href="paging">For Managers</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</section>
+		<section class="box_open box_glass pad_t main_nav">
+			<div class="wrap pad_t_half">
+				<div class="row row_bottom">
+					<div class="column side_content space_negative logo">
+						<a href="index.html">
+							<img src="images/logo.png">
+						</a>
+					</div>
 					<div class="column main_content">
-						<label class="field_search align_right" for="search_main">
-							<input id="search_main" class="field_expand" type="search" placeholder="Search U-Connect">
-							<button class="icon">Search</button>
-						</label>
-					</div>
-					<div class="column side_content">
-						<a href="#" class="button button_small txt_upper">Login</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="box_open pad_t">
-		<div class="wrap pad_t_half">
-			<div class="row row_bottom">
-				<div class="column side_content space_negative">
-					<a href="index.html">
-						<img class="logo" src="images/logo_main.png">
-					</a>
-				</div>
-				<div class="column main_content">
-					<div class="tabbed tab_minimal tab_line space_n_v main_nav">
-						<nav class="tabs">
-							<a href="#home" class="tab toggle">Home</a>
-							<a href="#clin" class="tab toggle">Clinical<br>Hub</a>
-							<a href="#dept" class="tab toggle">Departments <br>&amp; Programs</a>
-							<a href="#grow" class="tab toggle">Growth &amp; <br>Development</a>
-							<a href="#inst" class="tab toggle">Our <br>Institutions</a>
-							<a href="#sec" class="tab toggle">Safety <br>&amp;&nbsp;Security</a>
-						</nav>
+						<div class="tabbed tab_minimal tab_line space_n_v tab_accordion">
+							<nav class="tabs">
+								<a href="#home" class="tab">Home</a>
+								<a href="#clin" class="tab toggle icon icon_end" data-icon-after="down">Clinical<br>Hub</a>
+								<a href="#dept" class="tab toggle icon icon_end" data-icon-after="down">Departments <br>&amp;&nbsp;Programs</a>
+								<a href="#grow" class="tab toggle icon icon_end" data-icon-after="down">Growth&nbsp;&amp;<br>Development</a>
+								<a href="#inst" class="tab toggle icon icon_end" data-icon-after="down">Our <br>Institutions</a>
+								<a href="#sec" class="tab toggle icon icon_end" data-icon-after="down">Safety <br>&amp;&nbsp;Security</a>
+							</nav>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	<div class="tab_content hidden" id="home"></div>
-	<div class="tab_content" id="clin"></div>
-	<div class="tab_content" id="dept"></div>
-	<div class="tab_content" id="grow"></div>
-	<div class="tab_content" id="inst"></div>
-	<div class="tab_content" id="sec"></div>
-
-	<section class="box_dark">
+		</section>
+	</article>
+	<article class="mega_menu absolute">
+		<section class="tabbed tab_accordion tab_minimal" data-tabbed="true">
+			<a href="#home" class="tab_button pad_b" data-tabbed="true">Home</a>
+			<div class="tab_content hidden" id="home" data-tabbed="true"></div>
+			<a href="#clin" class="tab_button icon" data-tabbed="true">Clinical Hub</a>
+			<div class="tab_content " id="clin" data-tabbed="true">
+				<div class="wrap">
+					<img src="images/menu.jpg">
+				</div>
+			</div>
+			<a href="#dept" class="tab_button icon" data-tabbed="true">Departments &amp;&nbsp;Programs</a>
+			<div class="tab_content" id="dept" data-tabbed="true"></div>
+			<a href="#grow" class="tab_button icon" data-tabbed="true">Growth&nbsp;&amp; Development</a>
+			<div class="tab_content" id="grow" data-tabbed="true"></div>
+			<a href="#inst" class="tab_button icon" data-tabbed="true">Our Institutions</a>
+			<div class="tab_content" id="inst" data-tabbed="true"></div>
+			<a href="#sec" class="tab_button icon" data-tabbed="true">Safety &amp; Security</a>
+			<div class="tab_content" id="sec" data-tabbed="true"></div>
+		</section>
+	</article>
+</header>
+<article class="space_v">
+	<section class="box_dark border_b_half">
 		<div class="wrap">
-			<div class="row clearfix pad_t_half">
-
-				<div class="column align_right main_content">
+			<header class="row pad_t_half">
+				<div class="column split_side side_content"></div>
+				<div class="column main_content split_main">
 					<h1 class="h4">
 						<small class="txt_upper txt_label">You searched for</small><br>
 						"Lorem ipsum dolor sit amet"
 					</h1>
 				</div>
+			</header>
+		</div>
+		<div class="box_glass">
+			<div class="wrap">
+				<div class="row">
+					<div class="column">
+						<h2 class="h6 inline space_n_v pad_r">
+							<span class="txt_small txt_upper txt_label">
+								<strong>900 Results,</strong>
+								Filtered By:
+							</span>
+						</h2>
+						<ul class="txt_small list_inline list_nav_space bold filters">
+							<li>
+								<a class="icon tag close">Patient Safety</a>
+							</li>
+							<li>
+								<a class="icon company close" data-icon="hc">UWHC</a>
+							</li>
+
+						</ul>
+						<a class="float_right icon icon_start txt_small bold txt_upper pad_v_half" data-icon="delete" data-toggle=".filters">Remove Filters</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
-
-</header>
-
+</article>
 
 
-    <main role="main" class="wrap">
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, iusto, laudantium, voluptates, cum distinctio quos numquam sit earum error ex quis velit laborum hic quidem excepturi tenetur est! Odio, minima?</p>
-        <p>Nostrum, laborum, perferendis, distinctio, iusto tempora rem blanditiis at rerum impedit ea amet ab culpa incidunt fugit ut quo iste aut eos provident animi neque a officia odio. Nihil, ea!</p>
+<main role="main" class="space_v_2">
+	<div class="wrap">
         <div class="row">
-            <aside class="sidebar column" role="complementary">
-                <h4>
-                <mark>Grid Test - Sidebar</mark> dolor sit amet consectetur.
-                </h4>
-                <ul class="list_bordered_short">
-                	<li>Lorem ipsum dolor sit amet</li>
-                	<li>consectetur adipisicing elit</li>
-                	<li>Odio, quam assumenda modi</li>
-                </ul>
-                <p>Odio, quam assumenda modi quibusdam omnis nesciunt incidunt dolore dolorem nostrum ducimus laborum eum soluta quos fugit totam illum tempore dolor sint!</p>
+            <aside class="side_content split_side column contain" role="complementary">
+                <a class="button desk_hide icon icon_start space_v" data-icon="settings" data-toggle=".js-filters">
+					<span class="bigs_hide smallish_hide">Filter Results </span>
+				</a>
+
+				<div class="js-filters desk_show">
+					<h1 class="txt_label txt_small txt_upper bold smalls_hide">
+						Filter By
+					</h1>
+					<div class="row row_narrow">
+						<div class="column third_small">
+							<h2 class="txt_label txt_small txt_upper pad_t_half bold border_t">Company</h2>
+							<ul class="list_nav list_naked list_short space_negative">
+								<li><a class="icon company filters" data-icon="hc" style="display: none;">UWHC</a></li>
+								<li><a class="icon company" data-icon="mf">UWHC</a></li>
+								<li><a class="icon company" data-icon="uw">UW Health</a></li>
+							</ul>
+						</div>
+						<div class="column third_small">
+							<h2 class="txt_label txt_small txt_upper pad_t_half bold border_t">Type</h2>
+							<ul class="list_nav list_naked list_short space_negative">
+								<li><a class="icon icon_start" data-icon="article">News</a></li>
+								<li><a class="icon icon_start" data-icon="directory">Directory</a></li>
+								<li><a class="icon icon_start" data-icon="resources">Policies</a></li>
+							</ul>
+						</div>
+						<div class="column third_small">
+							<h2 class="txt_label txt_small txt_upper pad_t_half bold border_t">Tag</h2>
+							<ul class="list_nav list_naked list_short space_negative">
+								<li>
+									<a class="icon icon_start filters" data-icon="tag" style="display: none;">Patient Safety</a>
+								</li>
+								<li><a class="icon icon_start" data-icon="tag">Safety</a></li>
+								<li><a class="icon icon_start" data-icon="tag">Organizational Services</a></li>
+								<li><a class="icon icon_start" data-icon="tag">Technology</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
             </aside>
-            <article class="content column">
-                 <div class="row">
-                    <div class="wide-content column">
-                        <h3><mark>Grid Test - Main Content</mark> ipsum dolor sit amet.</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, quam assumenda modi quibusdam omnis nesciunt incidunt dolore dolorem nostrum ducimus laborum eum soluta quos fugit totam illum tempore dolor sint!</p>
+            <div class="main_content split_main column">
+				<h1 class="txt_label txt_small txt_upper bold">
+					Featured Result
+				</h1>
+				<article class="box_panel media_block_flush space_v">
+					<figure class="media side_content_fixed">
+						<img class="img" src="images/logo.png">
+					</figure>
+					<section class="media_body box_small box_light">
+						<ul class="breadcrumbs txt_small">
+							<li class="breadcrumb">Departments &amp; Programs</li>
+						</ul>
+						<h1 class="txt_serif h6"><a href="#">Safety/Emergency Management</a></h1>
+						<time class="txt_small">Sept. 27, 1985</time>
+						<p class="txt_truncate space_n_v">The goal of the Safety program is to provide and promote the safest possible physical environment free of hazards using a systematic approach based on the mission Lorem ipsum dolor.</p>
+						<ul class="list_inline txt_small">
+							<li><a class="icon tag">Safety</a></li>
+							<li><a class="icon tag">Organizational Services</a></li>
+							<li><a class="icon tag">Employee Health</a></li>
+						</ul>
+					</section>
+				</article>
+				<section class="box_panel pad_v">
+					<article class="media_block_flush space_v">
+						<div class="media media_icon side_content_fixed h5" data-icon="uw">
+							<span class="icon icon_start h1" data-icon="article">
+							</span>
+						</div>
+						<section class="media_body pad_h_half">
+							<header>
+								<ul class="breadcrumbs txt_small">
+									<li class="breadcrumb">Safety &amp; Security </li>
+									<li class="breadcrumb">Patient Safety </li>
+									<li class="breadcrumb">News </li>
+								</ul>
+								<h1 class="txt_serif h6">
+									<a href="#">Patient Safety</a>
+								</h1>
+							</header>
+							<p class="txt_small space_n_v">
+								<time>July 22, 2009</time> &mdash; By Donna Katen-Bahensky
+							</p>
+							<p class="txt_truncate space_n_v">I want to personally share with you details of a patient safety-related event at UW Hospital and Clinics. The event occurred in July and involved</p>
+							<ul class="list_inline txt_small">
+								<li><a class="icon tag">Patient Care</a></li>
+							</ul>
+						</section>
+					</article>
+					<article class="media_block_flush space_v">
+						<div class="media media_icon side_content_fixed h5" data-icon="hc">
+							<span class="icon icon_start h1" data-icon="tool">
+							</span>
+						</div>
+						<section class="media_body pad_h_half">
+							<header>
+								<ul class="breadcrumbs txt_small">
+									<li class="breadcrumb">Departments &amp; Programs </li>
+								</ul>
+								<h1 class="txt_serif h6">
+									<a href="#">Safety/Emergency Management</a>
+								</h1>
+							</header>
+							<time class="txt_small">Sept. 27, 1985</time>
+							<p class="txt_truncate space_n_v">The goal of the Safety program is to provide and promote the safest possible physical environment free of hazards using a systematic approach based on the mission Lorem ipsum dolor.</p>
+							<ul class="list_inline txt_small">
+								<li><a class="icon tag">Safety</a></li>
+								<li><a class="icon tag">Organizational Services</a></li>
+								<li><a class="icon tag">Employee Health</a></li>
+							</ul>
+						</section>
+					</article>
+				</section>
+			</div>
+		</div>
+	</div>
+</main>
 
-                        <a href="#main" class="tab_button" data-tab="tab_accordion tab_minimal tab_line tab_topline">Main</a>
-                        <div id="main" class="tab_content">
-                            <h5><mark>Tabs Test (tab_minimal, tab_line, tab_topline)</mark></h5>
-
-                            <a href="#tab5" class="tab_button" data-tab="tab_side">First</a>
-                            <div id="tab5" class="tab_content"><h5><mark>Tabs Test (tab_side)</mark></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, ratione doloremque obcaecati provident necessitatibus. Enim, vero quisquam repellat consequatur sed.</p>
-                            </div>
-
-                            <a href="#tab6" class="tab_button">Second</a>
-                            <div id="tab6" class="tab_content"><p>
-                                Consectetur adipisicing elit. Atque, tenetur, odio impedit nihil in quae reprehenderit ipsa qui iste ut iusto vitae voluptatibus maiores veniam asperiores totam quod aut porro?</p>
-                            </div>
-                            <a href="#tab7" class="tab_button">Third</a>
-                            <div id="tab7" class="tab_content">
-
-                                <a href="#tab12" class="tab_button">Non-tab</a>
-                            	<div id="tab12" class="tab_content"><p>
-                                This is tab_content with a single tab. It receives the tab wrapper, but no tab buttons</p>
-                            	</div>
-                                <p>
-                                Consectetur adipisicing elit. Atque, tenetur, odio impedit nihil in quae reprehenderit ipsa qui iste ut iusto vitae voluptatibus maiores veniam asperiores totam quod aut porro?</p>
-                            </div>
-
-                        </div>
-
-                        <a href="#other" class="tab_button">Complex Layout Example</a>
-                        <div id="other" class="tab_content">
-                            <div class="row">
-                            	<div class="sidebar column">
-                            		<p><small>
-                            		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, sequi.
-                            		</small></p>
-                            	</div>
-								<div class="content column">
-									<aside class="add-on align_right">
-									<p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate assumenda cumque magni dolore vitae blanditiis!</small></p>
-									</aside><!--
-								--><p class="wide-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, non, accusamus, harum sed fugit dolorum dolore enim corrupti totam tenetur rem rerum repellendus delectus excepturi et sunt facilis soluta necessitatibus.</p>
-									<p>Et, perferendis, repellat, asperiores enim esse dolorum ut provident sint reprehenderit pariatur expedita vitae quam possimus natus hic magni maxime dignissimos ducimus aperiam voluptas! Suscipit voluptas hic error cum optio?</p>
-									<p>Consequatur, repellat, ipsa, cum nesciunt reprehenderit quod temporibus impedit deserunt inventore atque magnam hic voluptatum vero dignissimos corrupti enim officia beatae voluptatibus ab adipisci! Libero sapiente excepturi quidem minima neque.</p>
-								</div>
-							</div>
-
-                        </div>
-                    </div>
-                    <aside class="add-on column" role="complementary">
-                        <p><small><mark><strong>Grid Test - Add-on</strong></mark> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, quam assumenda modi quibusdam omnis nesciunt incidunt dolore dolorem nostrum ducimus laborum eum soluta quos fugit totam illum tempore dolor sint!</small></p>
-                    </aside>
-                </div>
-            </article>
-            <div class="column">
-                <hr>
-            </div>
-        </div>
-
-        <table class="table_fixed table_striped">
-          <thead>
-              <tr>
-                <th>Movie Title</th>
-                <th>Genre</th>
-                <th>Year</th>
-                <th>Gross</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                <td>Table Test</td>
-                <td>Testing, Lorem</td>
-                <td>Ipsum</td>
-                <td>$Dolor</td>
-              </tr>
-              <tr>
-                <td>Star Wars</td>
-                <td>Adventure, Sci-fi</td>
-                <td>1977</td>
-                <td>$460,935,665</td>
-              </tr>
-              <tr>
-                <td>Howard The Duck</td>
-                <td>"Comedy"</td>
-                <td>1986</td>
-                <td>$16,295,774</td>
-              </tr>
-              <tr>
-                <td>American Graffiti</td>
-                <td>Comedy, Drama</td>
-                <td>1973</td>
-                <td>$115,000,000</td>
-              </tr>
-
-          </tbody>
-        </table>
-    </main>
-</div>
 
 <!--@import 'foot.kit'-->

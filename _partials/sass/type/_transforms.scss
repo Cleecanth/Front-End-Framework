@@ -11,3 +11,20 @@
 .txt_label{
 	font-family: $primary-font-stack;
 }
+txt_serif{
+	font-family: $secondary-font-stack;
+}
+.txt_truncate{
+	@include rems(height, type-space(2));
+	overflow: hidden;
+	position: relative;
+}
+.txt_truncate:after{
+	@extend %inline;
+	content: "...";
+	background-color: #fff;
+	padding: 0 1em;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}

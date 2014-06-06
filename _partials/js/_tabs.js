@@ -43,7 +43,7 @@
                 }while (a(w).hasClass("tab_button") === true);
 
                 //Check if we've already added this tab to a grouping.
-                if (a(y).data("tabbed") !== true ) {
+                if (a(y).data("tabbed") !== true || a(y).attr('data-tabbed') != 'true' ) {
 
                     //Grab data-tab attributes (since they can be used as optional style alternatives)
 					if (a(y).attr("data-tab") !== undefined){
@@ -70,13 +70,14 @@
             //Add a nav element to the top of the groups
 			//only if they contain more than one tab_content child
             a(tabbed).each(function(){
-			if (a(this).children('.tab_content').length > 1){
-				   a(this).prepend("<nav class='tabs' />");
-			   };
+				if (a(this).children('.tab_content').length > 1
+					|| a(this).attr('data-tabbed') != 'true'){
+					   a(this).prepend("<nav class='tabs' />");
+				};
 			});
 
             //Duplicate tab_buttons and put them inside nav.tabs
-            a(".tab_button").each(function() {
+            a(".tab_button:not([data-tabbed='true'])").each(function() {
                 //Find the appropriate nav.tabs
                 var tabNav = a(this).closest(".tabbed").children(".tabs");
 
@@ -147,15 +148,15 @@
                     //to the appropriate buttons.
                     a(this).addClass("active");
                     a("a[href^='" + d + "'].tab_button").addClass("active");
-                }else{
-					if (a(this).hasClass('toggle')){
+
+				// Toggle-tabs
+				}else if (a(this).hasClass('toggle')){
 						d = a(this).attr("href");
 						a(d).hide();
 						a(this).removeClass('active');
 						a("a[href^='" + d + "'].tab_button")
 						.removeClass('active');
-					};
-				};
+				}
 
             });
 
@@ -191,7 +192,3 @@
         });
     };
 })(jQuery);
-
-$(function(){
-
-})

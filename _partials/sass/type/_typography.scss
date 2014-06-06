@@ -84,6 +84,8 @@
 //    @return $number / ($number * 0 + 1);
 // }
 
+
+
 %type-vertical-rhythm {
     @extend %space_reset;
     margin-bottom: $type-magic-number;
@@ -113,10 +115,9 @@
         }
     }
 }
-body, .p, p {
+body {
    @include type-font-size($base-font-size);
    @extend %space_reset;
-
 }
 body{
 	padding-top: 0;
@@ -141,92 +142,93 @@ body{
 }
 
 @if $auto-scale-type == true {
-	@include headings(1,6){
-		margin-top: 0;
-		padding-bottom:0;
+	$type-h1-size: modular-scale(6);
+	$type-h2-size: modular-scale(5);
+	$type-h3-size: modular-scale(4);
+	$type-h4-size: modular-scale(3);
+	$type-h5-size: modular-scale(2);
+	$type-h6-size: modular-scale(1);
+	$type-h7-size: modular-scale(-1);
+}
+
+h1, %h1{
+	@extend %type-vertical-rhythm;
+	@include type-font-size($type-h1-size);
+	& + p{
+		@extend %negative_top; //[6]
 	}
-    @include headings-scale($scale-ratio);
 }
-@else{
-
-    h1, %h1{
-		@extend %type-vertical-rhythm;
-        @include type-font-size($type-h1-size);
-        & + p{
-            @extend %negative_top; //[6]
-        }
-    }
-    @if $type-scale-classes == true{
-        .h1{
-            @extend %h1;
-        }
-    }
-
-    h2, %h2 {
-		@extend %type-vertical-rhythm;
-        @include type-font-size($type-h2-size);
-        & + p{
-            @extend %negative_top; //[6]
-        }
-    }
-    @if $type-scale-classes == true{
-        .h2{
-            @extend %h2;
-        }
-   }
-
-    h3, %h3 {
-		@extend %type-vertical-rhythm;
-        @include type-font-size($type-h3-size);
-        & + p{
-            @extend %negative_top; //[6]
-        }
-    }
-    @if $type-scale-classes == true{
-        .h3{
-            @extend %h3;
-        }
-   }
-
-    h4, %h4 {
-		@extend %type-vertical-rhythm;
-        @include type-font-size($type-h4-size);
-        & + p{
-            @extend %negative_top; //[6]
-        }
-    }
-    @if $type-scale-classes == true{
-        .h4{
-            @extend %h4;
-        }
-   }
-
-    h5, %h5 {
-		@extend %type-vertical-rhythm;
-        @include type-font-size($type-h5-size);
-        & + p{
-            @extend %negative_top; //[6]
-        }
-    }
-    @if $type-scale-classes == true{
-        .h5{
-            @extend %h5;
-        }
-   }
-
-    h6, %h6 {
-		@extend %type-vertical-rhythm;
-        @include type-font-size($type-h6-size);
-        & + p{
-            @extend %negative_top; //[6]
-        }
-    }
-    @if $type-scale-classes == true{
-        .h6{
-            @extend %h6;
-        }
-   }
+@if $type-scale-classes == true{
+	.h1{
+		@extend %h1;
+	}
 }
+
+h2, %h2 {
+	@extend %type-vertical-rhythm;
+	@include type-font-size($type-h2-size);
+	& + p{
+		@extend %negative_top; //[6]
+	}
+}
+@if $type-scale-classes == true{
+	.h2{
+		@extend %h2;
+	}
+}
+
+h3, %h3 {
+	@extend %type-vertical-rhythm;
+	@include type-font-size($type-h3-size);
+	& + p{
+		@extend %negative_top; //[6]
+	}
+}
+@if $type-scale-classes == true{
+	.h3{
+		@extend %h3;
+	}
+}
+
+h4, %h4 {
+	@extend %type-vertical-rhythm;
+	@include type-font-size($type-h4-size);
+	& + p{
+		@extend %negative_top; //[6]
+	}
+}
+@if $type-scale-classes == true{
+	.h4{
+		@extend %h4;
+	}
+}
+
+h5, %h5 {
+	@extend %type-vertical-rhythm;
+	@include type-font-size($type-h5-size);
+	& + p{
+		@extend %negative_top; //[6]
+	}
+}
+@if $type-scale-classes == true{
+	.h5{
+		@extend %h5;
+	}
+}
+
+h6, %h6 {
+	@extend %type-vertical-rhythm;
+	@include type-font-size($type-h6-size);
+	& + p{
+		@extend %negative_top; //[6]
+	}
+}
+@if $type-scale-classes == true{
+	.h6{
+		@extend %h6;
+	}
+}
+
 
 //-------------------------------
 //   $LISTS
@@ -238,7 +240,7 @@ ul, ol, dd, menu {
 
 li > ul,
 li > ol {
-    @extend %space_n_v;
+    margin-bottom: 0;
 }
 
 
@@ -249,6 +251,7 @@ li > ol {
 //    $PARAGRAPHS
 //-------------------------------
 p, .p, %p {
+	@include type-font-size($base-font-size);
     @extend %type-vertical-rhythm;
 
     @if $indented-paragraphs == true {
@@ -381,7 +384,7 @@ b, strong, .bold, .strong{
 dfn {
     @extend %type_italic;
 }
-small {
+small, .txt_small {
     @include type-scale(font-size,-1);
 }
 sub,sup {

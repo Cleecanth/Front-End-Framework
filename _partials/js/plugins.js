@@ -26,4 +26,24 @@
     }
 }());
 
+$(function (){
+	$('[data-toggle]').click(function () {
+		$(this).toggleClass('active');
+		var toggletarget = $(this).attr('data-toggle');
+		$(toggletarget).fadeToggle();
+	});
+	var searching = function ( focused ) {
+		var target = $(focused).attr('data-focus');
+		$(target).toggleClass('search_active', function(){
+			$('.utility_column').toggleClass('absolute');
+		});
+	}
+	$('#search_main').on('focus', function(){
+		searching(this);
+	});
+	$('#search_main').on('blur', function(){
+		searching(this);
+	});
+
+});
 // Place any jQuery/helper plugins in here.

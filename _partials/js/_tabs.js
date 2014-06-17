@@ -90,7 +90,7 @@
             });
 
             //Make the first tab and tab_button in each grouping the active tab.
-            a(".tabbed .tab_button:first-of-type, .tabbed .tab:first-child").addClass("active");
+            a(".tabbed .tab_button:first-of-type, .tab:first-child").addClass("active");
 
             //Hide all tab_content.
             a(".tab_content").hide();
@@ -122,40 +122,42 @@
 
 
             a(".tabs a.tab").click(function(e) {
-                e.preventDefault();
 
+				if(!$(this).hasClass('tab_link')){
+					e.preventDefault();
 
-                // Just making sure we don't animate already active tabs.
-                if (a(this).hasClass('active') === false){
+					// Just making sure we don't animate already active tabs.
+					if (a(this).hasClass('active') === false){
 
-                    //Grab the target's ID through the clicked tab's href/hash value.
-                    d = a(this).attr("href");
-
-                    //Hiding all target siblings tab_content.
-                    a(d).siblings(".tab_content").hide();
-
-                    //Unhide the correct tab content.
-                    a(d).fadeIn(c.options.speed);
-
-                    //Finding tab and tab_button siblings
-                    //And then removing "active" class.
-                    a("a[href^='" + d + "']")
-                        .siblings(".tab, .tab_button")
-                        .addBack()
-                        .removeClass("active");
-
-                    //Adding back the "active" class
-                    //to the appropriate buttons.
-                    a(this).addClass("active");
-                    a("a[href^='" + d + "'].tab_button").addClass("active");
-
-				// Toggle-tabs
-				}else if (a(this).hasClass('toggle')){
+						//Grab the target's ID through the clicked tab's href/hash value.
 						d = a(this).attr("href");
-						a(d).hide();
-						a(this).removeClass('active');
-						a("a[href^='" + d + "'].tab_button")
-						.removeClass('active');
+
+						//Hiding all target siblings tab_content.
+						a(d).siblings(".tab_content").hide();
+
+						//Unhide the correct tab content.
+						a(d).fadeIn(c.options.speed);
+
+						//Finding tab and tab_button siblings
+						//And then removing "active" class.
+						a("a[href^='" + d + "']")
+							.siblings(".tab, .tab_button")
+							.addBack()
+							.removeClass("active");
+
+						//Adding back the "active" class
+						//to the appropriate buttons.
+						a(this).addClass("active");
+						a("a[href^='" + d + "'].tab_button").addClass("active");
+
+					// Toggle-tabs
+					}else if (a(this).hasClass('toggle')){
+							d = a(this).attr("href");
+							a(d).fadeOut(100);
+							a(this).removeClass('active');
+							a("a[href^='" + d + "'].tab_button")
+							.removeClass('active');
+					}
 				}
 
             });
@@ -164,21 +166,30 @@
             //Nearly identical to the previous function,
             //but with a slide effect.
             a(".tab_button").click(function(e) {
-                e.preventDefault();
-                if (a(this).hasClass('active') === false){
-                    d = a(this).attr("href");
-                    a(d).siblings(".tab_content")
-                        .addBack()
-                        .css("min-height","0")
-                        .slideUp(c.options.speed);
-                    a(d).slideToggle(c.options.speed);
-                    a("a[href^='" + d + "']")
-                        .siblings(".tab, .tab_button")
-                        .addBack()
-                        .removeClass("active");
-                    a(this).addClass("active");
-                    a("a[href^='" + d + "'].tab").addClass("active");
-                }
+                if(!$(this).hasClass('tab_link')){
+					e.preventDefault();
+					if (a(this).hasClass('active') === false){
+						d = a(this).attr("href");
+						a(d).siblings(".tab_content")
+							.addBack()
+							.css("min-height","0")
+							.slideUp(c.options.speed);
+						a(d).slideToggle(c.options.speed);
+						a("a[href^='" + d + "']")
+							.siblings(".tab, .tab_button")
+							.addBack()
+							.removeClass("active");
+						a(this).addClass("active");
+						a("a[href^='" + d + "'].tab").addClass("active");
+					}else if (a(this).hasClass('toggle')){
+						d = a(this).attr("href");
+						a(d).slideUp(c.options.speed);
+						a(this).removeClass('active');
+						a("a[href^='" + d + "'].tab")
+						.removeClass('active');
+					}
+				}
+
             });
 
         };

@@ -1,25 +1,25 @@
-.txt_left{
+.txt_left, %txt_left{
 	text-align: left;
 }
-.txt_upper{
+.txt_upper, %txt_upper{
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 }
-.txt_small{
+.txt_small, %txt_small{
 	@extend small;
 }
-.txt_label{
+.txt_label, %txt_label{
 	font-family: $primary-font-stack;
 }
-txt_serif{
+txt_serif, %txt_serif{
 	font-family: $secondary-font-stack;
 }
-.txt_truncate{
+.txt_truncate, %txt_truncate{
 	@include rems(height, type-space(2));
 	overflow: hidden;
 	position: relative;
 }
-.txt_truncate:after{
+.txt_truncate:after, %txt_truncate:after{
 	@extend %inline;
 	content: "...";
 	background-color: #fff;
@@ -27,4 +27,16 @@ txt_serif{
 	position: absolute;
 	right: 0;
 	bottom: 0;
+}
+.txt_right, %txt_right{
+	text-align: right;
+}
+.txt_center, %txt_center{
+	text-align: center;
+}
+.txt_single_line, %txt_single_line{
+	white-space: nowrap;
+}
+.txt_break, %txt_break{
+	word-break: break-word;
 }

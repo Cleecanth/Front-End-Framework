@@ -67,6 +67,13 @@
     }
 }
 
+//Alternative name
+@mixin extend($items) {
+    @each $item in $items {
+        @extend %#{$item};
+    }
+}
+
 //------------------------------------
 //    $SIMPLE MIXINS
 //------------------------------------
@@ -213,7 +220,6 @@
     }
     %#{$namespace}type_bold{
         font-weight: 800;
-        -webkit-font-smoothing: antialiased;
     }
     %#{$namespace}naked_list{
         @include no-bullets;

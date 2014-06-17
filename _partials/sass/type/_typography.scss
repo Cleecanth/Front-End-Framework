@@ -384,8 +384,8 @@ b, strong, .bold, .strong{
 dfn {
     @extend %type_italic;
 }
-small, .txt_small {
-    @include type-scale(font-size,-1);
+small {
+    @include type-scale(font-size, -1);
 }
 sub,sup {
     font-size: 75%;

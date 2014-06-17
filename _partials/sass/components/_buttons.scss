@@ -1,4 +1,5 @@
 @mixin button(
+	$size: 'medium',
     $flat-button: true,
     $button-color-bg: colors(link),
     $button-color-secondary: colors(link,dark),
@@ -7,6 +8,24 @@
 	$reversed: false
     )
 {
+	$padding: unquote('_half');
+	@if $size == 'large'{
+		$padding: unquote('');
+		@include type-space(padding-top, 1);
+		@include type-space(padding-bottom, .75);
+		@include type-space(margin-bottom, .25);
+	}
+	@if $size == 'small'{
+		$padding: unquote('_quarter');
+		@include type-space(padding-top, .25);
+		@include type-space(padding-bottom, .175);
+		@include type-space(margin-bottom, .2);
+	}
+	@if $size == 'medium'{
+		@include type-space(padding-top, .5);
+		@include type-space(padding-bottom, .475);
+		@include type-space(margin-bottom, .75);
+	}
     cursor: pointer;
     vertical-align: middle;
 	user-select: none;
@@ -17,12 +36,14 @@
 	background-color: $button-color-bg;
     @if $flat-button == true{
 
+		border-bottom: 0px;
+
 		@if $reversed == false{
 			box-shadow: inset 0 -3px $button-color-secondary;
 		}@else{
 			box-shadow: inset 0 2px $button-color-secondary;
 		}
-        border-bottom: 0px;
+
     }@else{
 
         background-image: linear-gradient(top, $button-color-bg 0.05%, $button-color-secondary 100% );
@@ -34,8 +55,7 @@
     }
 	color: $button-color-text;
     @extend %type_bold;
-    @extend %pad_half;
-
+    @extend %pad_h#{$padding};
 
     &:hover, &:focus {
 
@@ -91,15 +111,41 @@
 //Useful placeholder selector for simple button creation.
 
 %button{
-    @include button(true, #777, #ddd, #fff, 2px, true);
+    @include button('medium', true, #777, #ddd, #fff, 2px, true);
 }
-%button_big{
+%button_large{
     @include type-font-size(modular-scale(2), false);
-    @include type-space-sc(padding, .5, 1);
+    @include type-space(padding-top, 1.25);
+	@include type-space(padding-bottom, .975);
+	@include type-space(margin-bottom, .025);
 }
 %button_small{
 	@include type-font-size(modular-scale(-1), false);
+	@include type-space(padding-top, .25);
+	@include type-space(padding-bottom, .175);
+	@include type-space(margin-bottom, .2);
 }
 %button_wide{
     @extend %one_whole;
+}
+
+%button_group{
+	display: table-row;
+
+	.button_group_button{
+		border-radius: 0;
+		box-shadow: none;
+		border: 1px solid currentColor;
+		display: table-cell;
+		position: relative;
+		top: 0;
+	}
+
+	.button_group_button:first-child{
+		border-radius: 2px 0 0 2px;
+	}
+	.button_group_button:last-child, .button_group_button_last{
+		border-radius: 0px 2px 2px 0px;
+	}
+
 }

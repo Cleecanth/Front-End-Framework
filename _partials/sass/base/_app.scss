@@ -334,7 +334,7 @@ hr{
 	}
 	& .main_content{
 		@include mq(lap){
-			width: 100%;
+			width: auto;
 		}
 	}
 	& .tabbed{
@@ -415,7 +415,7 @@ hr{
 	@include mq(bigs){
 		z-index: 3;
 		display: block !important;
-		margin-top: 0;
+		margin-top: 0 !important;
 	}
 	& .tabbed {
 		display: inline-block;
@@ -450,6 +450,7 @@ hr{
 	}
 	.tab_button.active{
 		background-color: rgba(255,255,255,0.975) !important;
+		margin-bottom: 0;
 	}
 	& .active:after{
 		transform: rotateX(180deg);
@@ -459,34 +460,39 @@ hr{
 	}
 
 }
+
 .logo {
 	vertical-align: middle !important;
+	text-align: left;
 	@include type-space(min-height, 2);
 	min-width: 175px;
-	text-align: center;
+
 	@include mq(small){
 		padding-left: 0;
+		text-align: center;
 	}
 	@include mq(desk){
 		@include type-space(min-height, 2.75);
 		max-width: none;
 	}
-	@include mq((smallish, lap)){
-		text-align: left;
+	@include mq(smallish){
+		max-width: 70%;
 	}
 	@include mq(lap){
 		max-width: none;
+		width: 60%;
 	}
-	@media screen and (min-width: 960px) and (max-width: 1070px){
-		width: 18%;
+	@media screen and (min-width: 961px) and (max-width: 1070px){
+		width: 50%;
+		@include type-space(min-height, 2);
 	}
 
 	& a{
 		display: inline-block;
 		max-width: 150px;
 		vertical-align: bottom;
-		@include mq(bigs){
-			max-width: 190px;
+		@include mq((smallish,bigs)){
+			max-width: 180px;
 
 		}
 	}
@@ -504,7 +510,7 @@ hr{
 	vertical-align: middle;
 
 
-	& .login_button, & .search_button, & input[type="search"]{
+	& .button, & .search_button, & input[type="search"]{
 		@include mq(smalls){
 			@include type-space(line-height, 1.5);
 		}
@@ -526,7 +532,7 @@ hr{
 			padding-right: 5em;
 		}
 	}
-	& .login_button{
+	& .button{
 		white-space: nowrap;
 		overflow: hidden;
 		@include mq(smalls){
@@ -535,7 +541,7 @@ hr{
 	}
 
 	& [type="search"]:focus{
-		outline: none;
+		outline-color: transparent;
 		background-color: #fff;
 		box-shadow: inset 0 0 0px 1px rgba(0,0,0,0.4);
 		@extend %desk_one_whole;
@@ -673,10 +679,10 @@ hr{
 //------Search-------------//
 
 .search_anim {
-	transition: all 300ms ease-in;
+	transition: all 220ms ease-in;
 }
 .search_anim_bounce {
-	transition: all 350ms cubic-bezier(.25, .1, .5, 1.45);
+	transition: all 375ms cubic-bezier(.25, .1, .5, 1.45);
 	backface-visibility: hidden;
 	perspective: 1;
 }
@@ -771,13 +777,15 @@ hr{
 
 //Body
 
-.primary_column p{max-width: 43em;}
+.primary_column p{max-width: 40em;}
 .primary_column{max-width: 60em;}
 .primary_column .tabbed .tab_content{
 	@include mq(desk){
 		@include type-space-sc(padding, 1.5, 2, 2);
 	}
 }
+
+//----------New Headings----------//
 .heading, h1 {
 	@extend h1;
 	@include type-space(line-height, 1);
@@ -807,7 +815,6 @@ h1+h2{
 	@extend %type_bold;
 }
 
-//----------New Headings----------//
 
 
 

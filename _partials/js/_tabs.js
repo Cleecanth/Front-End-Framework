@@ -43,7 +43,7 @@
                 }while (a(w).hasClass("tab_button") === true);
 
                 //Check if we've already added this tab to a grouping.
-                if (a(y).data("tabbed") !== true || a(y).attr('data-tabbed') != 'true' ) {
+                if (a(y).data("tabbed") !== true && a(y).attr('data-tabbed') != 'true' ) {
 
                     //Grab data-tab attributes (since they can be used as optional style alternatives)
 					if (a(y).attr("data-tab") !== undefined){
@@ -71,7 +71,7 @@
 			//only if they contain more than one tab_content child
             a(tabbed).each(function(){
 				if (a(this).children('.tab_content').length > 1
-					|| a(this).attr('data-tabbed') != 'true'){
+					&& a(this).attr('data-tabbed') != 'true'){
 					   a(this).prepend("<nav class='tabs' />");
 				};
 			});
@@ -130,14 +130,31 @@
 					if (a(this).hasClass('active') === false){
 
 						//Grab the target's ID through the clicked tab's href/hash value.
+						var $this = a(this);
 						d = a(this).attr("href");
 
 						//Hiding all target siblings tab_content.
 						a(d).siblings(".tab_content").hide();
 
 						//Unhide the correct tab content.
-						a(d).fadeIn(c.options.speed);
-
+						if (typeof a.velocity == 'object') {
+							if($this.hasClass('toggle')){
+								a(d).velocity({
+									translateY: ["0", "easeInOutBack", "-30%"],
+									opacity: [1, "easeIn"]},
+									{display: "block"},
+									{duration: c.options.speed}
+								);
+							}else{
+								a(d).velocity({
+									opacity: [1, "easeIn"]},
+									{display: "block"},
+									{duration: c.options.speed}
+								);
+							}
+						}else{
+							a(d).fadeIn(c.options.speed);
+						}
 						//Finding tab and tab_button siblings
 						//And then removing "active" class.
 						a("a[href^='" + d + "']")
@@ -153,7 +170,16 @@
 					// Toggle-tabs
 					}else if (a(this).hasClass('toggle')){
 							d = a(this).attr("href");
-							a(d).fadeOut(100);
+							if (typeof a.velocity == 'object') {
+								a(d).velocity(
+									{"margin-top":[0,0],
+									translateY: ["-30%", "easeInOutBack", "0"],
+									opacity: [0, "easeIn", 1]
+									},
+									{duration: 300});
+							}else{
+								a(d).fadeOut(100);
+							}
 							a(this).removeClass('active');
 							a("a[href^='" + d + "'].tab_button")
 							.removeClass('active');
@@ -171,19 +197,33 @@
 					if (a(this).hasClass('active') === false){
 						d = a(this).attr("href");
 						a(d).siblings(".tab_content")
-							.addBack()
-							.css("min-height","0")
-							.slideUp(c.options.speed);
-						a(d).slideToggle(c.options.speed);
+								.addBack()
+								.css("min-height","0")
+								.slideUp(c.options.speed);
+						if (typeof a.velocity !== 'object') {
+							a(d).slideToggle(c.options.speed);
+						}else{
+							a(d).velocity(
+								{height: "auto",
+								 opacity: "1",
+								 translateY: "0"},
+								{display: "block"},
+								{duration: c.options.speed,
+								easing: "easeInOutBack"});
+						}
 						a("a[href^='" + d + "']")
-							.siblings(".tab, .tab_button")
-							.addBack()
-							.removeClass("active");
+								.siblings(".tab, .tab_button")
+								.addBack()
+								.removeClass("active");
 						a(this).addClass("active");
 						a("a[href^='" + d + "'].tab").addClass("active");
 					}else if (a(this).hasClass('toggle')){
 						d = a(this).attr("href");
-						a(d).slideUp(c.options.speed);
+						if (typeof a.velocity !== 'object') {
+							a(d).slideUp(c.options.speed);
+						}else{
+							a(d).velocity("slideUp",{duration: c.options.speed});
+						}
 						a(this).removeClass('active');
 						a("a[href^='" + d + "'].tab")
 						.removeClass('active');

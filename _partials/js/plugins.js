@@ -56,7 +56,7 @@ $(function (){
 					&& click_check($('[data-toggle="#mega_menu"]'), e) === false){
 				$('#mega_menu').find('.tab_button').removeClass('active');
 				$('#mega_menu')
-					.velocity({translateY: ["-30%", "easeInOutBack", 0], opacity: [0, "easeIn", 1] }, {duration: 300});
+					.velocity({"margin-top":[0,0], translateY: ["-30%", "easeInOutBack", "0"], opacity: [0, "easeIn", 1] }, {duration: 300});
 				$('#mega_menu .tab_content:visible').fadeOut(300);
 				$('#mega_menu').velocity({translateY: [0], opacity: [1]}, {duration: 0});
 				$('#mega_buttons').find('.active').removeClass('active');
